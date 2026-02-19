@@ -1,7 +1,6 @@
 sudo: required
 services:
   - docker
-  -
 
 before_install:
   - docker build -t ainmutaqorrobin/docker-cicd -f Dockerfile.dev .
