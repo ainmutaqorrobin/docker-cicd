@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t cygnetops/react-test .
-      - run: docker run -e CI=true cygnetops/react-test npm start
+      - run: docker build -t ainmutaqorrobin/docker-cicd .
+      - run: docker run -e CI=true ainmutaqorrobin/docker-cicd npm start
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
